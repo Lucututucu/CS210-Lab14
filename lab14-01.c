@@ -1,7 +1,7 @@
 /** lab14-01.c
 * ===========================================================
-* Name: 
-* Section:
+* Name: Lucas Briggs 18 Setp 2024
+* Section: T1/2 Kloenne
 * Project: Lab 14
 * Purpose: Introduction to Pointers
 * ===========================================================
@@ -28,12 +28,12 @@ int main() {
     printf("aNum = %d, bNum = %d\n\n", aNum, bNum);
 
     // TODO:  Part 1 - Uncomment this code when you have implemented swapPassByValue
-    //swapPassByValue(aNum, bNum);
-    //printf("from main: aNum = %d, bNum = %d\n\n", aNum, bNum);
+    swapPassByValue(aNum, bNum);
+    printf("from main: aNum = %d, bNum = %d\n\n", aNum, bNum);
 
     // TODO:  Part 2 - Uncomment this code when you have implemented swapPassByReference
-    //swapPassByReference(&aNum, &bNum);
-    //printf("from main: aNum = %d, bNum = %d\n\n", aNum, bNum);
+    swapPassByReference(&aNum, &bNum);
+    printf("from main: aNum = %d, bNum = %d\n\n", aNum, bNum);
 
     return 0;
 }

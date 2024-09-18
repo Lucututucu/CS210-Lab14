@@ -1,7 +1,7 @@
 /** lab14functs.c
 * ===========================================================
-* Name: 
-* Section:
+* Name: Lucas Briggs 18 Setp 2024
+* Section: T1/2 Kloenne
 * Project: Lab 14
 * Purpose: Introduction to Pointers
 * ===========================================================
@@ -24,13 +24,13 @@ void swapPassByValue(int x, int y) {
     int temp;
 
     // Set temp to have the same value as x
-    
+    temp = x;
 
     // Make x have the same value as y
-    
+    x = y;
 
     // Make y have the same value as temp
-    
+    y = temp;
 
     printf("after swap: x = %d y = %d\n", x, y);
 }
@@ -49,13 +49,20 @@ void swapPassByReference(int* ptrX, int* ptrY) {
     int temp;
 
     // Set temp to contain the value stored at ptrX
-    
+    temp = *ptrX;
 
     // Set the value stored at ptrX to contain the value stored at ptrY
-    
+    *ptrX = *ptrY;
 
     // Set the value stored at ptrY to contain the value stored in temp
-    
+    *ptrY = temp;
     
     printf("after swap: ptrX = %d; ptrY = %d\n", *ptrX, *ptrY);
+}
+
+void makeChange(int input, int* quarters, int* dimes, int* nickels, int* pennies) {
+    *quarters = input / 25;
+    *dimes = (input % 25) / 10;
+    *nickels = ((input % 25) % 10) / 5;
+    *pennies = input % 5;
 }
